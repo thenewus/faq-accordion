@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "work-sans";
+  src: url(./assets/fonts/static/WorkSans-Regular.ttf)
+}
+@font-face {
+  font-family: "work-sans-bold";
+  src: url(./assets/fonts/static/WorkSans-Bold.ttf)
+}
+@font-face {
+  font-family: "work-sans-semi";
+  src: url(./assets/fonts/static/WorkSans-SemiBold.ttf)
+}
+
+body {
+  background-color: #F8EEFF;
+}
+
+.pc-bg {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.mobile-bg {
+  display: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.main-wrapper {
+  width: 600px;
+  background-color: white;
+  padding: 40px;
+
+  border-radius: 16px;
+  box-shadow: 0px 32px 56px 0px rgba(80, 0, 118, 0.10);
+}
+
+/* header */
+.header {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+h1 {
+  color: var(--Dark-Purple, #301534);
+  font-family: 'work-sans-bold';
+  font-size: 56px;
+  line-height: normal;
+}
+
+/* question container */
+.one {
+  margin-top: 32px;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+span {
+  color: var(--Dark-Purple, #301534);
+  font-family: 'work-sans-semi';
+  font-size: 18px;
+  line-height: normal;
+}
+
+
+span:hover {
+  color: var(--Pink, #AD28EB);
+  transition: .5s ease;
+}
+
+.data-1,
+.data-2,
+.data-3,
+.data-4 {
+  /* margin-top: 24px; */
+  color: var(--Pale-Purple, #8B6990);
+  font-family: 'work-sans';
+  font-size: 16px;
+  line-height: 150%; /* 24px */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+.answer {
+  margin-top: 24px;
+}
+
+.divider {
+  height: 1px;
+  width: 520px;
+  background: var(--Light-Pink, #F8EEFF);
+  margin: 24px 0;
+}
+
+.plus-logo {
+  display: flex;
+}
+
+.minus-logo {
+  display: none;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  .pc-bg {
+    display: none;
+  }
+
+  .mobile-bg {
+    display: block;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .main-wrapper {
+    width: 400px;
+    padding: 24px;
+  }
+
+  span {
+    font-size: 16px;
+    width: 225px;
+  }
+
+  .data-1,
+  .data-2,
+  .data-3,
+  .data-4 {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .divider {
+    width: 350px;
+  }
+}
